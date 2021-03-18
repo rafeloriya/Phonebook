@@ -1,0 +1,51 @@
+    <div [formGroup]="contactForm" style="width: 100%;" fxLayoutAlign="center center" fxLayout="column">
+      <div style="width: 60%;" fxLayoutAlign="center center" fxLayout="column">
+  
+          <mat-toolbar style="width: 100%;" fxLayoutAlign="space-between center" color="primary">
+              <div style="width: 50%;color: white;" fxLayoutAlign="start center">Add Contact</div>
+              <div style="width: 50%;" fxLayoutAlign="end center">
+                  <mat-icon style="cursor: pointer;" [routerLink]="['/contactList']">arrow_back</mat-icon>
+              </div>
+          </mat-toolbar>
+  
+          <mat-card style="width: 30%;">
+      
+            <div style="width:100%" fxLayoutGap="1rem">
+              <mat-form-field fxLayoutGap="1rem " >
+                <input formControlName="Name" matInput placeholder="Name" >
+              
+              </mat-form-field>
+              
+            </div>
+            <div>
+              <mat-form-field fxLayoutGap="1rem">
+                  <input formControlName="mobileNo" matInput placeholder="Mobile No">
+                
+                </mat-form-field>
+      
+            </div>
+            <div fxLayoutGap="1rem">
+              
+            <mat-form-field >
+              <input formControlName="email" matInput placeholder="email">
+            </mat-form-field>
+            
+        
+            </div>
+            <div>
+              
+            <mat-form-field >
+              <input formControlName="address" matInput placeholder="address">
+            </mat-form-field>
+              
+            </div>
+            <div fxLayoutAlign="center center" fxLayoutGap="1rem">
+              <button mat-raised-button color="primary" (click)="onSubmit()"[disabled]="this.contactForm.invalid"> save</button>
+              <button  mat-raised-button (click)="contactForm.reset()">cancel</button>
+            </div>
+        
+          </mat-card>
+          
+      </div>
+  </div>
+
